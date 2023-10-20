@@ -1,0 +1,88 @@
+swagger: "2.0"
+info:
+  title: "Social Auth Service"
+  description: "API documentation for Social Auth Service"
+  version: "1.0"
+
+host: "localhost"
+basePath: "/api"
+schemes:
+  - "http"
+
+paths:
+  /facebook/login:
+    post:
+      summary: "User authentication by Facebook SSO"
+      description: "Create or update a user with the facebook data"
+      operationId: "createUpdateUserFacebook"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            type: "object"
+            properties:
+              access_token:
+                type: "string"
+                example: "123qwergjhdbwgwwdgjdg24tsfgwgh"
+                description: "access token"
+              code:
+                type: "string"
+                example: "example"
+                description: "code"
+              id_token:
+                type: "string"
+                example: "1"
+                description: "token id"
+            required:
+              - access_token
+      response:
+        200:
+          description: "User was validated successfully."
+          content:
+            application/json:
+              type: "object"
+              properties:
+                key:
+                  type: "string"
+                  example: "123qwergjhdbwgwwdgjdg24tsfgwgh"
+                  description: "session id"
+        500:
+          description: "Error in validating a user"
+  /google/login:
+    post:
+      summary: "User authentication by Google SSO"
+      description: "Create or update a user with the google data"
+      operationId: "createUpdateUserGoogle"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            type: "object"
+            properties:
+              access_token:
+                type: "string"
+                example: "123qwergjhdbwgwwdgjdg24tsfgwgh"
+                description: "access token"
+              code:
+                type: "string"
+                example: "example"
+                description: "code"
+              id_token:
+                type: "string"
+                example: "1"
+                description: "token id"
+            required:
+              - access_token
+      response:
+        200:
+          description: "User was validated successfully."
+          content:
+            application/json:
+              type: "object"
+              properties:
+                key:
+                  type: "string"
+                  example: "123qwergjhdbwgwwdgjdg24tsfgwgh"
+                  description: "session id"
+        500:
+          description: "Error in validating a user"
