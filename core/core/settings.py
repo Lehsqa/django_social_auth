@@ -82,6 +82,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+REST_FRAMEWORK = {
+    'EXCEPTION_HANDLER': 'accounts.error_handlers.accounts_exception_handler',
+}
+
 REST_AUTH = {
     'LOGIN_SERIALIZER': 'dj_rest_auth.serializers.LoginSerializer',
     'TOKEN_SERIALIZER': 'dj_rest_auth.serializers.TokenSerializer',
