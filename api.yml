@@ -84,5 +84,7 @@ paths:
                   type: "string"
                   example: "123qwergjhdbwgwwdgjdg24tsfgwgh"
                   description: "session id"
+        400:
+          description: "Error in input access token"
         500:
-          description: "Error in validating a user"
+          description: "Error in validation access token"
