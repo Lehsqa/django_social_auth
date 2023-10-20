@@ -35,3 +35,7 @@
 ## Swagger
 
 ### `api.yml` - swagger file
+
+## Additional information
+
+### Just to be on a safe side, make conversion of `core/entrypoint.sh` file to Unix (LF) standard
