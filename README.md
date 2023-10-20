@@ -2,7 +2,7 @@
 
 ## Configuration
 
-### Before starting need to config .env file:
+### Before starting need to config core/.env file:
 1) ### `GOOGLE_REDIRECT_URL` - redirect url after auth by google auth (default: http://localhost)
 2) ### `FACEBOOK_REDIRECT_URL` - redirect url after auth by facebook auth (default: http://localhost)
 
